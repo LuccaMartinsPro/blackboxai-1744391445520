@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat - FitConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .chat-container {
+            height: calc(100vh - 64px);
+        }
+        .message-list {
+            height: calc(100vh - 240px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-white w-64 flex flex-col">
+            <div class="p-4">
+                <div class="text-2xl font-bold text-blue-400">FitConnect</div>
+            </div>
+            <div class="flex-1 overflow-y-auto">
+                <!-- Search -->
+                <div class="p-4">
+                    <div class="relative">
+                        <input type="text" placeholder="Buscar conversas..." 
+                            class="w-full bg-gray-700 text-gray-200 rounded-md py-2 px-4 pl-10 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+                            <i class="fas fa-search text-gray-400"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chat List -->
+                <div class="space-y-1">
+                    <button class="w-full text-left px-4 py-3 bg-gray-700 hover:bg-gray-600">
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-10 w-10 rounded-full">
+                            <div class="ml-3">
+                                <div class="text-sm font-medium">João Silva</div>
+                                <div class="text-xs text-gray-400">Aluno</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="w-full text-left px-4 py-3 hover:bg-gray-700">
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-10 w-10 rounded-full">
+                            <div class="ml-3">
+                                <div class="text-sm font-medium">Dra. Ana</div>
+                                <div class="text-xs text-gray-400">Nutricionista</div>
+                            </div>
+                        </div>
+                    </button>
+                    <button class="w-full text-left px-4 py-3 hover:bg-gray-700">
+                        <div class="flex items-center">
+                            <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-10 w-10 rounded-full">
+                            <div class="ml-3">
+                                <div class="text-sm font-medium">Maria Santos</div>
+                                <div class="text-xs text-gray-400">Aluno</div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="p-4 border-t border-gray-700">
+                <a href="#" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 rounded-md">
+                    <i class="fas fa-cog mr-2"></i> Configurações
+                </a>
+                <a href="../auth/login.html" class="block px-4 py-2 text-gray-300 hover:bg-gray-700 rounded-md">
+                    <i class="fas fa-sign-out-alt mr-2"></i> Sair
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Chat Area -->
+        <div class="flex-1 flex flex-col">
+            <!-- Chat Header -->
+            <header class="bg-white shadow">
+                <div class="px-4 py-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-10 w-10 rounded-full">
+                        <div class="ml-4">
+                            <h2 class="text-lg font-semibold">João Silva</h2>
+                            <div class="text-sm text-gray-500">Online</div>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-video"></i>
+                        </button>
+                        <button class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-phone"></i>
+                        </button>
+                        <button class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-ellipsis-v"></i>
+                        </button>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Messages Area -->
+            <div class="flex-1 overflow-y-auto p-4 space-y-4 message-list">
+                <!-- Received Message -->
+                <div class="flex items-start">
+                    <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-8 w-8 rounded-full">
+                    <div class="ml-2">
+                        <div class="bg-white rounded-lg p-3 shadow">
+                            <p class="text-sm">Olá! Como está indo o treino de hoje?</p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">10:30</span>
+                    </div>
+                </div>
+
+                <!-- Sent Message -->
+                <div class="flex items-start justify-end">
+                    <div class="mr-2">
+                        <div class="bg-blue-600 text-white rounded-lg p-3 shadow">
+                            <p class="text-sm">Oi! Está indo muito bem! Já completei a série de agachamentos.</p>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1 flex justify-end">10:32</span>
+                    </div>
+                </div>
+
+                <!-- Received Message with Image -->
+                <div class="flex items-start">
+                    <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Contact" class="h-8 w-8 rounded-full">
+                    <div class="ml-2">
+                        <div class="bg-white rounded-lg p-3 shadow space-y-2">
+                            <p class="text-sm">Excelente! Aqui está um vídeo demonstrativo para o próximo exercício:</p>
+                            <div class="rounded-lg overflow-hidden">
+                                <img src="https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg" alt="Exercise Demo" class="w-64">
+                            </div>
+                        </div>
+                        <span class="text-xs text-gray-500 mt-1">10:35</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Message Input -->
+            <div class="bg-white border-t p-4">
+                <div class="flex items-center space-x-4">
+                    <button class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-paperclip"></i>
+                    </button>
+                    <div class="flex-1">
+                        <input type="text" placeholder="Digite sua mensagem..." 
+                            class="w-full border-gray-300 rounded-full px-4 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                    </div>
+                    <button class="bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Sidebar -->
+        <div class="w-64 bg-white border-l">
+            <div class="p-4">
+                <h3 class="text-lg font-semibold mb-4">Informações</h3>
+                <div class="space-y-4">
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-500">Tipo</h4>
+                        <p class="text-sm">Aluno</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-500">Plano Atual</h4>
+                        <p class="text-sm">Intermediário - Semana 3</p>
+                    </div>
+                    <div>
+                        <h4 class="text-sm font-medium text-gray-500">Último Treino</h4>
+                        <p class="text-sm">Hoje, 09:30</p>
+                    </div>
+                </div>
+
+                <div class="mt-6">
+                    <h4 class="text-sm font-medium text-gray-500 mb-2">Arquivos Compartilhados</h4>
+                    <div class="space-y-2">
+                        <div class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-file-pdf text-red-500 mr-2"></i>
+                            <span class="text-sm">Plano de Treino.pdf</span>
+                        </div>
+                        <div class="flex items-center p-2 hover:bg-gray-50 rounded-lg">
+                            <i class="fas fa-file-image text-blue-500 mr-2"></i>
+                            <span class="text-sm">Progresso.jpg</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Simple message sending simulation
+        const messageInput = document.querySelector('input[type="text"]');
+        const sendButton = document.querySelector('.bg-blue-600');
+        const messageList = document.querySelector('.message-list');
+
+        sendButton.addEventListener('click', sendMessage);
+        messageInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        });
+
+        function sendMessage() {
+            const message = messageInput.value.trim();
+            if (message) {
+                const time = new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+                const messageHTML = `
+                    <div class="flex items-start justify-end">
+                        <div class="mr-2">
+                            <div class="bg-blue-600 text-white rounded-lg p-3 shadow">
+                                <p class="text-sm">${message}</p>
+                            </div>
+                            <span class="text-xs text-gray-500 mt-1 flex justify-end">${time}</span>
+                        </div>
+                    </div>
+                `;
+                messageList.insertAdjacentHTML('beforeend', messageHTML);
+                messageInput.value = '';
+                messageList.scrollTop = messageList.scrollHeight;
+            }
+        }
+    </script>
+</body>
+</html>
