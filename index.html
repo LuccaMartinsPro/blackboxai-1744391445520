@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitConnect - Plataforma de Treino</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <span class="text-2xl font-bold text-blue-600">FitConnect</span>
+                        </div>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <a href="pages/auth/login.html" class="text-gray-700 hover:text-blue-600 px-3 py-2 rounded-md text-sm font-medium">Login</a>
+                        <a href="pages/auth/register.html" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium">Registrar</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <main class="flex-grow">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="lg:grid lg:grid-cols-2 lg:gap-8 items-center">
+                    <div>
+                        <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl">
+                            Transforme seus treinos com o FitConnect
+                        </h1>
+                        <p class="mt-4 text-xl text-gray-500">
+                            Conectando Personal Trainers, Alunos e Nutricionistas em uma única plataforma para maximizar resultados.
+                        </p>
+                        <div class="mt-8 flex space-x-4">
+                            <a href="pages/auth/register.html" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700">
+                                Começar Agora
+                            </a>
+                            <a href="#features" class="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md text-gray-700 bg-white hover:bg-gray-50">
+                                Saiba Mais
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-12 lg:mt-0">
+                        <img src="https://images.pexels.com/photos/4498606/pexels-photo-4498606.jpeg" alt="Fitness Training" class="rounded-lg shadow-xl">
+                    </div>
+                </div>
+
+                <!-- Features Section -->
+                <div id="features" class="py-16">
+                    <h2 class="text-3xl font-extrabold text-gray-900 text-center mb-12">
+                        Recursos Principais
+                    </h2>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                        <!-- Personal Trainers -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-dumbbell text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Para Personal Trainers</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Gerencie seus alunos</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Crie planos personalizados</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Acompanhe o progresso</li>
+                            </ul>
+                        </div>
+
+                        <!-- Students -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-user-graduate text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Para Alunos</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Acesse seus treinos</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Veja vídeos explicativos</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Registre seu progresso</li>
+                            </ul>
+                        </div>
+
+                        <!-- Nutritionists -->
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-blue-600 mb-4">
+                                <i class="fas fa-apple-alt text-3xl"></i>
+                            </div>
+                            <h3 class="text-xl font-semibold text-gray-900 mb-2">Para Nutricionistas</h3>
+                            <ul class="text-gray-600 space-y-2">
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Acompanhe seus pacientes</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Crie planos nutricionais</li>
+                                <li><i class="fas fa-check text-green-500 mr-2"></i>Integre com treinos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800">
+            <div class="max-w-7xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 FitConnect. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
