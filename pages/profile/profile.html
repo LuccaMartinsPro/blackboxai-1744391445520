@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil - FitConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-white w-64 flex flex-col">
+            <div class="p-4">
+                <div class="text-2xl font-bold text-blue-400">FitConnect</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1">
+                <a href="../dashboard/trainer-dashboard.html" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-user mr-3"></i>
+                    Meu Perfil
+                </a>
+            </nav>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow">
+                <div class="px-4 py-4">
+                    <h1 class="text-2xl font-semibold text-gray-900">Meu Perfil</h1>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto bg-gray-50 p-6">
+                <div class="max-w-4xl mx-auto">
+                    <!-- Profile Header -->
+                    <div class="bg-white shadow rounded-lg mb-6">
+                        <div class="p-6">
+                            <div class="flex items-center">
+                                <div class="relative">
+                                    <img src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Profile" class="h-32 w-32 rounded-full object-cover">
+                                    <button class="absolute bottom-0 right-0 bg-blue-600 text-white rounded-full p-2 hover:bg-blue-700">
+                                        <i class="fas fa-camera"></i>
+                                    </button>
+                                </div>
+                                <div class="ml-6">
+                                    <h2 class="text-2xl font-bold text-gray-900">João Silva</h2>
+                                    <p class="text-gray-600">Personal Trainer</p>
+                                    <div class="mt-2 flex space-x-4">
+                                        <span class="text-sm text-gray-500">
+                                            <i class="fas fa-map-marker-alt mr-1"></i>
+                                            São Paulo, SP
+                                        </span>
+                                        <span class="text-sm text-gray-500">
+                                            <i class="fas fa-envelope mr-1"></i>
+                                            joao@example.com
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Profile Information -->
+                    <div class="bg-white shadow rounded-lg mb-6">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-4">Informações Pessoais</h3>
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Nome Completo</label>
+                                        <input type="text" value="João Silva" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Email</label>
+                                        <input type="email" value="joao@example.com" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Telefone</label>
+                                        <input type="tel" value="(11) 98765-4321" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Data de Nascimento</label>
+                                        <input type="date" value="1990-01-01" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Professional Information (for PT/Nutritionist) -->
+                    <div class="bg-white shadow rounded-lg mb-6">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-4">Informações Profissionais</h3>
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Registro Profissional</label>
+                                        <input type="text" value="CREF 123456-G/SP" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Especialização</label>
+                                        <input type="text" value="Musculação, CrossFit" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-medium text-gray-700">Sobre</label>
+                                    <textarea rows="4" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">Personal Trainer especializado em treinamento funcional e hipertrofia. Mais de 5 anos de experiência ajudando pessoas a alcançarem seus objetivos.</textarea>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Physical Information (for Students) -->
+                    <div class="bg-white shadow rounded-lg mb-6">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-4">Informações Físicas</h3>
+                            <form class="space-y-6">
+                                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Altura (cm)</label>
+                                        <input type="number" value="175" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Peso (kg)</label>
+                                        <input type="number" value="75" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                    </div>
+                                    <div>
+                                        <label class="block text-sm font-medium text-gray-700">Objetivo</label>
+                                        <select class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                                            <option>Hipertrofia</option>
+                                            <option>Emagrecimento</option>
+                                            <option>Condicionamento</option>
+                                            <option>Força</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Preferences -->
+                    <div class="bg-white shadow rounded-lg mb-6">
+                        <div class="p-6">
+                            <h3 class="text-lg font-semibold mb-4">Preferências</h3>
+                            <form class="space-y-4">
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-bell text-gray-400 mr-3"></i>
+                                        <div>
+                                            <p class="text-sm font-medium text-gray-700">Notificações</p>
+                                            <p class="text-sm text-gray-500">Receber notificações de mensagens e atualizações</p>
+                                        </div>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer" checked>
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                                    </label>
+                                </div>
+                                <div class="flex items-center justify-between">
+                                    <div class="flex items-center">
+                                        <i class="fas fa-moon text-gray-400 mr-3"></i>
+                                        <div>
+                                            <p class="text-sm font-medium text-gray-700">Modo Escuro</p>
+                                            <p class="text-sm text-gray-500">Alternar entre tema claro e escuro</p>
+                                        </div>
+                                    </div>
+                                    <label class="relative inline-flex items-center cursor-pointer">
+                                        <input type="checkbox" class="sr-only peer">
+                                        <div class="w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-blue-600"></div>
+                                    </label>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <!-- Save Changes Button -->
+                    <div class="flex justify-end">
+                        <button type="button" class="px-4 py-2 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                            Salvar Alterações
+                        </button>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <script>
+        // Profile image upload simulation
+        document.querySelector('.fa-camera').parentElement.addEventListener('click', function() {
+            // Here you would typically trigger a file input
+            console.log('Upload profile picture');
+        });
+
+        // Form submission
+        document.querySelector('button[type="button"]').addEventListener('click', function() {
+            // Here you would typically collect all form data and send to backend
+            console.log('Save profile changes');
+            // Show success message
+            alert('Alterações salvas com sucesso!');
+        });
+    </script>
+</body>
+</html>
