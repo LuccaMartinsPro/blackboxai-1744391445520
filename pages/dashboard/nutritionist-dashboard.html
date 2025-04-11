@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Nutricionista - FitConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex">
+        <!-- Sidebar -->
+        <div class="bg-gray-800 text-white w-64 flex flex-col">
+            <div class="p-4">
+                <div class="text-2xl font-bold text-blue-400">FitConnect</div>
+            </div>
+            <nav class="flex-1 px-2 py-4 space-y-1">
+                <a href="#" class="bg-gray-900 text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-home mr-3"></i>
+                    Dashboard
+                </a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-users mr-3"></i>
+                    Meus Pacientes
+                </a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-apple-alt mr-3"></i>
+                    Planos Nutricionais
+                </a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-calendar-alt mr-3"></i>
+                    Consultas
+                </a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-comments mr-3"></i>
+                    Mensagens
+                </a>
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-chart-line mr-3"></i>
+                    Relatórios
+                </a>
+            </nav>
+            <div class="p-4 border-t border-gray-700">
+                <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-cog mr-3"></i>
+                    Configurações
+                </a>
+                <a href="../auth/login.html" class="text-gray-300 hover:bg-gray-700 hover:text-white group flex items-center px-2 py-2 text-sm font-medium rounded-md">
+                    <i class="fas fa-sign-out-alt mr-3"></i>
+                    Sair
+                </a>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="flex-1 flex flex-col overflow-hidden">
+            <!-- Top Navigation -->
+            <header class="bg-white shadow">
+                <div class="px-4 py-4 flex items-center justify-between">
+                    <div class="flex items-center">
+                        <span class="text-lg font-semibold">Dra. Ana Nutricionista</span>
+                    </div>
+                    <div class="flex items-center space-x-4">
+                        <button class="text-gray-500 hover:text-gray-700">
+                            <i class="fas fa-bell"></i>
+                        </button>
+                        <div class="relative">
+                            <button class="flex items-center space-x-2">
+                                <img class="h-8 w-8 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Profile">
+                                <span class="text-sm font-medium text-gray-700">Meu Perfil</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Main Content Area -->
+            <main class="flex-1 overflow-y-auto bg-gray-50 p-6">
+                <!-- Quick Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-blue-100 text-blue-600">
+                                <i class="fas fa-users text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-500">Total de Pacientes</p>
+                                <p class="text-lg font-semibold">32</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-green-100 text-green-600">
+                                <i class="fas fa-calendar-check text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-500">Consultas Hoje</p>
+                                <p class="text-lg font-semibold">8</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-yellow-100 text-yellow-600">
+                                <i class="fas fa-file-alt text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-500">Planos Ativos</p>
+                                <p class="text-lg font-semibold">28</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white rounded-lg shadow p-6">
+                        <div class="flex items-center">
+                            <div class="p-3 rounded-full bg-purple-100 text-purple-600">
+                                <i class="fas fa-star text-xl"></i>
+                            </div>
+                            <div class="ml-4">
+                                <p class="text-sm text-gray-500">Avaliação Média</p>
+                                <p class="text-lg font-semibold">4.9</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Today's Appointments and Patient Progress -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                    <!-- Today's Appointments -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <h2 class="text-lg font-semibold mb-4">Consultas de Hoje</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                        <div class="ml-4">
+                                            <p class="font-medium">Carlos Silva</p>
+                                            <p class="text-sm text-gray-500">09:00 - Primeira Consulta</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                                        Iniciar
+                                    </button>
+                                </div>
+                                <div class="flex items-center justify-between p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center">
+                                        <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                        <div class="ml-4">
+                                            <p class="font-medium">Marina Santos</p>
+                                            <p class="text-sm text-gray-500">10:30 - Acompanhamento</p>
+                                        </div>
+                                    </div>
+                                    <button class="px-4 py-2 bg-gray-200 text-gray-700 rounded-md hover:bg-gray-300">
+                                        Preparar
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Recent Patient Progress -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <h2 class="text-lg font-semibold mb-4">Progresso dos Pacientes</h2>
+                            <div class="space-y-4">
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="flex items-center">
+                                            <img class="h-8 w-8 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                            <span class="ml-3 font-medium">Pedro Oliveira</span>
+                                        </div>
+                                        <span class="text-green-600">+2.5kg</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-green-600 h-2 rounded-full" style="width: 85%"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mt-2">Meta de Ganho de Massa</p>
+                                </div>
+                                <div class="p-4 bg-gray-50 rounded-lg">
+                                    <div class="flex items-center justify-between mb-2">
+                                        <div class="flex items-center">
+                                            <img class="h-8 w-8 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                            <span class="ml-3 font-medium">Ana Costa</span>
+                                        </div>
+                                        <span class="text-blue-600">-3.8kg</span>
+                                    </div>
+                                    <div class="w-full bg-gray-200 rounded-full h-2">
+                                        <div class="bg-blue-600 h-2 rounded-full" style="width: 60%"></div>
+                                    </div>
+                                    <p class="text-sm text-gray-500 mt-2">Meta de Emagrecimento</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recent Activities and Messages -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Recent Activities -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <h2 class="text-lg font-semibold mb-4">Atividades Recentes</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start">
+                                    <div class="p-2 rounded-full bg-blue-100 text-blue-600">
+                                        <i class="fas fa-user-plus"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-sm font-medium">Novo paciente registrado</p>
+                                        <p class="text-xs text-gray-500">Há 2 horas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="p-2 rounded-full bg-green-100 text-green-600">
+                                        <i class="fas fa-file-medical"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-sm font-medium">Plano nutricional atualizado</p>
+                                        <p class="text-xs text-gray-500">Há 4 horas</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start">
+                                    <div class="p-2 rounded-full bg-yellow-100 text-yellow-600">
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="ml-4">
+                                        <p class="text-sm font-medium">Nova avaliação recebida</p>
+                                        <p class="text-xs text-gray-500">Há 6 horas</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Messages -->
+                    <div class="bg-white rounded-lg shadow">
+                        <div class="p-6">
+                            <h2 class="text-lg font-semibold mb-4">Mensagens Recentes</h2>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                    <div class="flex-1">
+                                        <div class="bg-gray-50 p-4 rounded-lg">
+                                            <p class="font-medium">João Silva</p>
+                                            <p class="text-sm text-gray-600">Dúvida sobre o plano alimentar da semana...</p>
+                                            <p class="text-xs text-gray-500 mt-2">Há 1 hora</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <img class="h-10 w-10 rounded-full" src="https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg" alt="Patient">
+                                    <div class="flex-1">
+                                        <div class="bg-gray-50 p-4 rounded-lg">
+                                            <p class="font-medium">Maria Santos</p>
+                                            <p class="text-sm text-gray-600">Enviando o registro alimentar de hoje...</p>
+                                            <p class="text-xs text-gray-500 mt-2">Há 3 horas</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="mt-4 text-blue-600 hover:text-blue-700 text-sm font-medium">
+                                Ver Todas as Mensagens
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+</body>
+</html>
