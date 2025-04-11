@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro - FitConnect</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <div class="min-h-screen flex flex-col">
+        <!-- Navigation -->
+        <nav class="bg-white shadow-lg">
+            <div class="max-w-7xl mx-auto px-4">
+                <div class="flex justify-between h-16">
+                    <div class="flex">
+                        <div class="flex-shrink-0 flex items-center">
+                            <a href="../../index.html" class="text-2xl font-bold text-blue-600">FitConnect</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Registration Form -->
+        <div class="flex-grow flex items-center justify-center py-12 px-4 sm:px-6 lg:px-8">
+            <div class="max-w-md w-full space-y-8">
+                <div>
+                    <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
+                        Crie sua conta
+                    </h2>
+                    <p class="mt-2 text-center text-sm text-gray-600">
+                        Já tem uma conta?
+                        <a href="login.html" class="font-medium text-blue-600 hover:text-blue-500">
+                            Faça login
+                        </a>
+                    </p>
+                </div>
+
+                <div class="mt-8">
+                    <!-- User Type Selection -->
+                    <div class="grid grid-cols-3 gap-4 mb-8">
+                        <button onclick="selectUserType('student')" id="student-btn" class="p-4 border rounded-lg text-center hover:border-blue-500 focus:outline-none user-type-btn">
+                            <i class="fas fa-user-graduate text-2xl mb-2"></i>
+                            <div class="text-sm font-medium">Aluno</div>
+                        </button>
+                        <button onclick="selectUserType('trainer')" id="trainer-btn" class="p-4 border rounded-lg text-center hover:border-blue-500 focus:outline-none user-type-btn">
+                            <i class="fas fa-dumbbell text-2xl mb-2"></i>
+                            <div class="text-sm font-medium">Personal Trainer</div>
+                        </button>
+                        <button onclick="selectUserType('nutritionist')" id="nutritionist-btn" class="p-4 border rounded-lg text-center hover:border-blue-500 focus:outline-none user-type-btn">
+                            <i class="fas fa-apple-alt text-2xl mb-2"></i>
+                            <div class="text-sm font-medium">Nutricionista</div>
+                        </button>
+                    </div>
+
+                    <form id="registration-form" class="space-y-6" action="#" method="POST">
+                        <input type="hidden" id="user-type" name="userType" value="">
+                        
+                        <!-- Basic Information -->
+                        <div class="rounded-md shadow-sm -space-y-px">
+                            <div>
+                                <label for="name" class="sr-only">Nome Completo</label>
+                                <input id="name" name="name" type="text" required 
+                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-t-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Nome Completo">
+                            </div>
+                            <div>
+                                <label for="email" class="sr-only">Email</label>
+                                <input id="email" name="email" type="email" required 
+                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Email">
+                            </div>
+                            <div>
+                                <label for="password" class="sr-only">Senha</label>
+                                <input id="password" name="password" type="password" required 
+                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Senha">
+                            </div>
+                            <div>
+                                <label for="confirm-password" class="sr-only">Confirmar Senha</label>
+                                <input id="confirm-password" name="confirmPassword" type="password" required 
+                                    class="appearance-none rounded-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-b-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Confirmar Senha">
+                            </div>
+                        </div>
+
+                        <!-- Professional Information (Hidden by default) -->
+                        <div id="professional-info" class="hidden space-y-4">
+                            <div>
+                                <label for="registration" class="sr-only">Número de Registro</label>
+                                <input id="registration" name="registration" type="text"
+                                    class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Número de Registro Profissional">
+                            </div>
+                            <div>
+                                <label for="specialization" class="sr-only">Especialização</label>
+                                <input id="specialization" name="specialization" type="text"
+                                    class="appearance-none relative block w-full px-3 py-2 border border-gray-300 placeholder-gray-500 text-gray-900 rounded-md focus:outline-none focus:ring-blue-500 focus:border-blue-500 focus:z-10 sm:text-sm" 
+                                    placeholder="Especialização">
+                            </div>
+                        </div>
+
+                        <div>
+                            <button type="submit" 
+                                class="group relative w-full flex justify-center py-2 px-4 border border-transparent text-sm font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                                <span class="absolute left-0 inset-y-0 flex items-center pl-3">
+                                    <i class="fas fa-user-plus"></i>
+                                </span>
+                                Criar Conta
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer class="bg-gray-800">
+            <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
+                <div class="text-center text-gray-400">
+                    <p>&copy; 2024 FitConnect. Todos os direitos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        function selectUserType(type) {
+            // Reset all buttons
+            document.querySelectorAll('.user-type-btn').forEach(btn => {
+                btn.classList.remove('border-blue-500', 'bg-blue-50');
+            });
+
+            // Highlight selected button
+            document.getElementById(`${type}-btn`).classList.add('border-blue-500', 'bg-blue-50');
+            
+            // Set hidden input value
+            document.getElementById('user-type').value = type;
+
+            // Show/hide professional information fields
+            const professionalInfo = document.getElementById('professional-info');
+            if (type === 'trainer' || type === 'nutritionist') {
+                professionalInfo.classList.remove('hidden');
+            } else {
+                professionalInfo.classList.add('hidden');
+            }
+        }
+
+        // Form validation
+        document.getElementById('registration-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirm-password').value;
+            const userType = document.getElementById('user-type').value;
+
+            if (password !== confirmPassword) {
+                alert('As senhas não coincidem!');
+                return;
+            }
+
+            if (!userType) {
+                alert('Por favor, selecione um tipo de usuário!');
+                return;
+            }
+
+            // Here you would typically send the form data to your backend
+            console.log('Form submitted successfully!');
+            // Redirect to appropriate dashboard based on user type
+            // window.location.href = `../dashboard/${userType}-dashboard.html`;
+        });
+    </script>
+</body>
+</html>
